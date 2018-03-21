@@ -1,10 +1,10 @@
 # porfolio-2018
 
-> portfolio inspired by the work of M.Mondrian, made with nuxt and babylon js
+> portfolio inspired by the work of M.Mondrian, made with nuxt
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install # Or yarn install
 
