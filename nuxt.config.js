@@ -1,12 +1,6 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/Portfolio'
-  }
-} : {}
-
 module.exports = {
-  ...routerBase,
   router: {
+    base: '/portfolio-2018/',
     middleware: 'routing',
     extendRoutes (routes, resolve) {
       routes.push({
