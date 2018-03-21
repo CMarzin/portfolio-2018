@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+}
+
+p {
+  font-family: "Futura Book";
+  font-size:16px;
+  color: $darkblue;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-family: "Bauer Bodoni";
+  font-weight: bold;
+  color:$darkblue;
+  font-size:45px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  font-family: "Bauer Bodoni Condensed";
+  font-weight: bold;
+  color:$darkblue;
+  font-size:21px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  &--hide {
+    display:none;
+  }
+
+  &--fade {
+    opacity: 0;
+  }
+}
