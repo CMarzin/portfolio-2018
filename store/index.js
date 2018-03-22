@@ -25,7 +25,7 @@ const store = () => new Vuex.Store({
       jochengerz: {
         color: 'red',
         description: 'I worked on this project at Edenspiekermann, mainly on the filter part. For more information: ',
-        img: 'gerz2.jpg',
+        img: 'gerz.jpg',
         links: {
           moreInformation: 'https://www.edenspiekermann.com/projects/jochen-gerz/',
           seeWebsite: 'jochengerz.eu/works'
