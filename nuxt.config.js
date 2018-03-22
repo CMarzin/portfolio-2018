@@ -31,12 +31,6 @@ module.exports = {
   /*
   ** Build configuration
   */
-  plugins: [
-    {
-      src: '~/plugins/pixi',
-      ssr: false
-    }
-  ],
   css: [
     // SCSS file in the project
     '@/assets/styles/main.scss'

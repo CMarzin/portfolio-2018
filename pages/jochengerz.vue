@@ -9,7 +9,6 @@
 
 <script>
 import { think } from 'cowsay'
-import Playground from '~/components/playgroundComponent'
 
 import Left from '~/components/Left/left'
 import Middle from '~/components/Middle/middle'
@@ -47,7 +46,6 @@ export default {
     }
   },
   components: {
-    'playground': Playground,
     'Left': Left,
     'Middle': Middle,
     'Right': Right

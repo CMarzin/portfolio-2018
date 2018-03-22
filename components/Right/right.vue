@@ -18,7 +18,8 @@
       </div>
       <div :class="['container__right-menu-content', customClassBg]" style="transform: scaleX(0);">
         <nuxt-link v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === 'jochengerz' ? '/' : title.replace(/\s+/g, '')">
-          <h3 class="container__main-nav_horizontal--title" >{{ title.toUpperCase() }}</h3>
+          <h3 :class="['container__main-nav_horizontal--title'], highlightCurrentRoute" >{{ title.toUpperCase() }}</h3>
+          <span v-if="highlightCurrentRoute(title)" class="container__right-menu-current-path"></span>
         </nuxt-link>
       </div>
       <nuxt-link class="container__right-next-project" :to="this.$store.state.pathToNextProject">
@@ -52,10 +53,6 @@ export default {
       let customClass = 'txt-' + this.$store.state.projects[this.$store.state.pathToCurrentProject].color
       return customClass
     },
-    customClassBgPrevious: function () {
-      let customClass = 'bonjour-' + this.$store.state.projects[this.$store.state.pathToPreviousProject].color
-      return customClass
-    },
     customClassBg: function () {
       let customClass = 'bonjour-' + this.$store.state.projects[this.$store.state.pathToCurrentProject].color
       return customClass
@@ -66,6 +63,17 @@ export default {
     }
   },
   methods: {
+    highlightCurrentRoute: function (title) {
+      if (this.$route.path === '/' + title.replace(/\s+/g, '')) {
+        console.log('coucou', title.replace(/\s+/g, ''))
+        return true
+      } else if (this.$route.path === '/' && title.replace(/\s+/g, '') === 'jochengerz') {
+        console.log('test')
+        return true
+      } else {
+        return false
+      }
+    },
     openMenu: function () {
       if (this.toggleMenu) {
         this.toggleMenu = false
