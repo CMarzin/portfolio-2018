@@ -25,11 +25,15 @@
   color: $blue;
 }
 
+.hide-scalex {
+  transform: scaleX(0);
+  transform-origin: 100% 100% 0px;
+}
+
 .title {
   font-size: font-size('title');
   font-family: $eksell;
-  white-space: nowrap;
-
+  // white-space: nowrap;
   margin-top: spacing('large');
 }
 

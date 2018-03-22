@@ -16,7 +16,7 @@
         </div>
         <div :class="['title', 'container__left-title', customClassText]">
          <div class="container__left-title-content">
-            <span :class="['container__left-title-volet', customClassBg]"></span>
+            <span :class="['container__left-title-volet']"></span>
             <h1 class="container__left-title-scale" >{{ this.$store.state.currentProjectTitle }}</h1>
          </div>
         </div>

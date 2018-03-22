@@ -1,7 +1,7 @@
 <template>
   <div class="container__middle">
     <div class="container__middle-photo">
-      <span :class="['container__middle-photo-volet', customClassBgNext]"></span>
+      <span class="container__middle-photo-volet"></span>
       <img :src="this.$store.state.projects[this.$store.state.pathToCurrentProject].img" alt="">
     </div>
     <a class="container__middle-website" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.seeWebsite" target="_blank">

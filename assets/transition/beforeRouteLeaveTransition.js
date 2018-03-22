@@ -1,7 +1,18 @@
 import anime from 'animejs'
 
 const beforeRouteLeaveTransition = (el, store, next) => {
-  console.log('store', store.state.stateMenu)
+  const customCurrentClass = 'bonjour-' + store.state.projects[store.state.pathToCurrentProject].color
+  const customClassBgNext = 'bonjour-' + store.state.projects[store.state.pathToNextProject].color
+
+  const titleVolet = el.querySelector('.container__left-title-volet')
+  const photoVolet = el.querySelector('.container__middle-photo-volet')
+
+  titleVolet.setAttribute('style', 'transform: scaleX(0)')
+  titleVolet.classList.add(customCurrentClass)
+
+  photoVolet.classList.add(customClassBgNext)
+  photoVolet.setAttribute('style', 'transform: scaleY(0)')
+
   if (store.state.stateMenu) {
     anime({
       targets: '.container__right-menu-content',
