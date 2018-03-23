@@ -1,8 +1,8 @@
 <template>
   <div class="container__middle">
-    <div class="container__middle-photo" :style="{'background-image': 'url(' + this.$store.state.projects[this.$store.state.pathToCurrentProject].img + ')', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat'}">
+    <div class="container__middle-photo">
       <span class="container__middle-photo-volet"></span>
-      <!-- <img :src="this.$store.state.projects[this.$store.state.pathToCurrentProject].img" alt=""> -->
+      <img :src="this.$store.state.projects[this.$store.state.pathToCurrentProject].img" alt="">
     </div>
     <a class="container__middle-website" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.seeWebsite" target="_blank">
       <p class="container__middle-website-text">SEE WEBSITE</p>

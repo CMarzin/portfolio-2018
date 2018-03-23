@@ -33,12 +33,12 @@
 .title {
   font-size: font-size('title');
   font-family: $eksell;
-  // white-space: nowrap;
   margin-top: spacing('large');
 
   @media (max-width: 720px) {
-    font-size: font-size('large');
-    margin-top: spacing('medium');
+    font-size: font-size('sublarge');
+    margin-left: spacing('small');
+    margin-top: 0;
   }
 }
 

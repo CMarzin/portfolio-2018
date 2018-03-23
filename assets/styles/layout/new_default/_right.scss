@@ -47,6 +47,14 @@
       }
     }
 
+    &-nav-title {
+      @media (max-width: 720px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     &-nav a {
       padding: 10px 10px 10px 10px;
       width: 80%;
