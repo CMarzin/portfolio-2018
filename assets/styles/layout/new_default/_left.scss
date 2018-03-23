@@ -5,6 +5,11 @@
     height: 100%;
     display: flex;
 
+    @media (max-width: 720px) {
+      display: block;
+      width: 100%;
+    }
+
     &-title {
       position: relative;
     }
@@ -36,6 +41,10 @@
       &:hover .container__left-prev-arrow {
         animation: none;
         opacity: 1;
+      }
+
+      @media (max-width: 720px) {
+        display: none;
       }
     }
 
@@ -95,13 +104,25 @@
       display: flex;
       flex-flow: column;
       padding-left: spacing('medium');
+
+      @media (max-width: 720px) {
+        margin-top: 10%;
+        padding: spacing('medium');
+        height: auto;
+      }
     }
 
     &-elements-content {
+      position: relative;
       display: flex;
       flex-flow: column;
       height: 50%;
       justify-content: flex-end;
+
+      @media (max-width: 720px) {
+        display: block;
+        height: auto;
+      }
     }
 
 /*******************************
@@ -153,6 +174,10 @@
       padding-top: spacing('large');
       font-family: $maison_mono;
       line-height: 1.5;
+
+      @media (max-width: 720px) {
+        padding-top: spacing('medium');
+      }
     }
   }
 }
