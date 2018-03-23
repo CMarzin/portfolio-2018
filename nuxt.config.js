@@ -1,6 +1,6 @@
 module.exports = {
   router: {
-    base: '/portfolio-2018/',
+    // base: '/portfolio-2018/',
     middleware: 'routing',
     extendRoutes (routes, resolve) {
       routes.push({

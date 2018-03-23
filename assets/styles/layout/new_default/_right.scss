@@ -260,7 +260,12 @@
       text-decoration: none;
       color: black;
 
-      &:hover div{
+      &:hover .container__right-next-text {
+        opacity: 1;
+      }
+
+      &:hover .container__right-next-arrow {
+        animation: none;
         opacity: 1;
       }
     }
@@ -271,7 +276,6 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      opacity: 0;
       transition: .5s ease;
     }
 
@@ -281,9 +285,12 @@
       border-style: solid;
       border-width: 15px 0 15px 20px;
       border-color: transparent transparent transparent $black;
+      animation: blink 2s ease infinite;
     }
 
     &-next-text {
+      opacity: 0;
+      transition: .5s ease;
       writing-mode: vertical-lr;
       text-orientation: upright;
       font-size: font-size('subtitle');
