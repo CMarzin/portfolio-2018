@@ -28,7 +28,7 @@ const store = () => new Vuex.Store({
         img: 'gerz.jpg',
         links: {
           moreInformation: 'https://www.edenspiekermann.com/projects/jochen-gerz/',
-          seeWebsite: 'jochengerz.eu/works'
+          seeWebsite: 'https://www.jochengerz.eu/works'
         }
       },
       mywings: {
