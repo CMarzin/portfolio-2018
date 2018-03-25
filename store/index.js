@@ -24,25 +24,25 @@ const store = () => new Vuex.Store({
     projects: {
       jochengerz: {
         color: 'red',
-        description: 'I worked on this project at Edenspiekermann, mainly on the filter part. For more information: ',
+        description: 'I worked on this artistic project at Edenspiekermann. It was challenging because I had no connection with the previous team. I had to manage alone to understand how the website worked. Finally, I could add new functionalities, fix bugs, update the pages and allow the website launch.',
         img: 'gerz.jpg',
         links: {
-          moreInformation: 'https://www.edenspiekermann.com/projects/jochen-gerz/',
+          // moreInformation: 'https://www.edenspiekermann.com/projects/jochen-gerz/',
           seeWebsite: 'https://www.jochengerz.eu/works'
         }
       },
       mywings: {
         color: 'yellow',
-        description: 'I was working on this platform during my time at Edenspiekermann. I was doing mostly maintenance and sometimes working on new functionality.',
+        description: 'I worked on this platform during my time at Edenspiekermann. I mostly did maintenance and sometime I developed new functionalities. It was a huge experience in the management of a big project within a seven people team.',
         img: 'mywings.jpg',
         links: {
-          moreInformation: 'https://www.edenspiekermann.com/projects/red-bull-mywings/',
+          // moreInformation: 'https://www.edenspiekermann.com/projects/red-bull-mywings/',
           seeWebsite: 'http://mywings.redbull.com/fr-fr/'
         }
       },
       portfolio: {
         color: 'blue',
-        description: 'It’s my previous portfolio. The hardest part was the compatibility of the svg mask with all browser. Like this one I made the design and the coding part.',
+        description: 'You can see my previous portfolio. The hardest part was the compatibility of the SVG mask with all browsers. I precise that I made the entire  design and coding part. You can find the code right **here**.',
         img: 'portfolio.jpg',
         links: {
           seeWebsite: 'http://corentinmarzin.fr/lab/portfolio-2017/'
@@ -58,7 +58,7 @@ const store = () => new Vuex.Store({
       },
       maitrerenard: {
         color: 'yellow',
-        description: 'It was a fun school project made in a weeks with some friends at school. The goal is to write a poem and the editor validate if your poem respect some guidelines (Alexandrine, …).',
+        description: 'It was a fun school project made in a week with some friends at school. The goal was to write a poem and the editor validated if your poem respected some guidelines (Alexandrine, …). I particularly worked on the animations.',
         img: 'maitrerenard.jpg',
         links: {
           seeWebsite: 'http://corentinmarzin.fr/lab/maitre-renard/public/'

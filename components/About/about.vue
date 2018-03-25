@@ -2,7 +2,11 @@
   <div class="container__right-about-description" style="opacity: 0">
     <div class="container__right-about-text">
       <p>{{this.firstLine}}</p>
+      <p>{{this.status}}</p>
       <p>{{this.secondLine}}</p>
+      <p>{{this.stackOne}}</p>
+      <p>{{this.stackTwo}}</p>
+      <p>{{this.stackThree}}</p>
       <p>{{this.thirdLine}}</p>
       <p>{{this.fourthLine}}</p>
       <p><a :href="`mailto:${this.email}`">{{this.email}}</a></p>
@@ -50,6 +54,15 @@ export default {
   name: 'About',
   data () {
     return {
+      firstLine: 'Hi, my name is Corentin Marzin.',
+      status: 'I am a Creative developer and student in fourth year at HETIC in France.',
+      secondLine: 'I like to experiment innovative technologies (currently playing with Nuxt and React native) and love to discover new ways of coding.',
+      stackOne: 'I currently use React, Vue, Nuxt, React native, Ruby on rails, GIT, Gulp and some PHP with Symfony.',
+      stackTwo: 'I had the opportunity to work as a project manager on several occasions.',
+      stackThree: 'From time to time I could express myself by creating the design of websites or making some motion design.',
+      thirdLine: 'Today, I am currently looking for an internship/job from July 1st to November 30th. Last year I was in Berlin and this year I would like to go in Montréal. Indeed I enjoyed working with a cosmopolitan team and wish to do it again !',
+      fourthLine: 'If you need more information or just to say hi here my email :',
+      email: 'corentinmarzin@free.fr',
       pathGithubMark: `M16.3,0.1C7.3,0.1,0,7.3,0,16.3c0,7,4.5,13.3,11.2,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
           c-4.5,1-5.5-2.2-5.5-2.2c-0.3-1-0.9-1.8-1.8-2.4c-1.5-1,0.1-1,0.1-1c1,0.1,2,0.8,2.5,1.7c0.9,1.7,3,2.3,4.7,1.4c0,0,0,0,0,0
           c0.1-0.8,0.4-1.6,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.6,0.6-3.2,1.7-4.4C7.1,9.7,7.1,8.2,7.7,6.8c0,0,1.4-0.4,4.5,1.7
@@ -60,12 +73,7 @@ export default {
       pathCodepenSquare: 'M394.46 203.74c0-.18-.07-.36-.1-.54-.06-.35-.13-.7-.22-1s-.13-.4-.19-.6-.2-.61-.32-.91-.18-.41-.28-.61-.27-.56-.42-.82-.24-.39-.35-.58-.34-.51-.53-.76l-.43-.54c-.2-.23-.4-.46-.62-.67s-.32-.34-.5-.49-.46-.4-.7-.59l-.56-.43-.24-.2-132.54-88.38a12.46 12.46 0 0 0-13.83 0L110.07 195l-.21.15c-.19.14-.38.28-.56.43s-.48.39-.71.59-.34.32-.5.49-.42.44-.62.67-.29.36-.43.54-.36.5-.52.76-.24.38-.36.58-.29.54-.42.82-.19.4-.28.61-.22.6-.32.91-.14.4-.19.6-.15.69-.22 1c0 .18-.08.36-.1.54a12 12 0 0 0-.11 1.63v88.37a12.25 12.25 0 0 0 .11 1.63c0 .18.07.36.1.53.06.35.13.7.22 1s.13.4.19.6.2.61.32.92.18.41.28.6.27.56.42.83l.36.57c.16.26.34.51.52.76s.28.37.43.54.4.46.62.67.32.34.5.49.46.41.71.6.37.29.56.43l.21.15 132.56 88.38a12.44 12.44 0 0 0 13.83 0L389 304.1l.21-.15c.19-.14.38-.28.56-.43s.48-.39.7-.6.33-.32.5-.49.42-.44.62-.67.29-.35.43-.54.36-.5.53-.76l.35-.57c.16-.28.29-.55.42-.83s.19-.4.28-.6.22-.61.32-.92.14-.4.19-.6.16-.69.22-1c0-.17.08-.36.1-.53a13 13 0 0 0 .11-1.63v-88.42a12.77 12.77 0 0 0-.08-1.62zM262 140.28l97.65 65.1L316 234.56l-54-36.15zm-24.93 0v58.13l-54 36.15-43.62-29.18zm-107.62 88.41l31.18 20.86-31.18 20.86zm107.63 130.13l-97.65-65.1 43.62-29.17 54 36.14zM249.55 279l-44.08-29.49 44.08-29.49 44.08 29.49zM262 358.82v-58.13l54-36.14 43.62 29.17zm107.63-88.41l-31.18-20.86 31.18-20.86z',
       pathUnsplash: 'M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zM32 10.7v14.9c0 2.3-1.9 4.3-4.3 4.3H4.3C1.9 29.9 0 28 0 25.6v-15c0-2.3 1.9-4.3 4.3-4.3H8L8.8 4c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z',
       pathLinkedin: 'M16.67 0H1.33A1.31 1.31 0 0 0 0 1.3v15.4A1.31 1.31 0 0 0 1.33 18h15.34A1.32 1.32 0 0 0 18 16.7V1.3A1.32 1.32 0 0 0 16.67 0zM5.34 15.34H2.67V6.75h2.67zM4 5.57A1.55 1.55 0 1 1 5.55 4 1.55 1.55 0 0 1 4 5.57zm11.33 9.76h-2.66v-4.17c0-1 0-2.28-1.39-2.28s-1.6 1.12-1.6 2.21v4.25H7V6.75h2.57v1.17a2.8 2.8 0 0 1 2.53-1.39c2.7 0 3.2 1.78 3.2 4.09zM21.66 13.88a.57.57 0 0 0 .58-.61c0-.43-.26-.64-.79-.64h-.86v2.25h.32v-1h.41l.62 1h.34l-.66-1zm-.37-.22h-.37v-.76h.47c.25 0 .53 0 .53.36s-.29.4-.63.4z',
-      pathLinkedinR: 'M21.33 11.64a2.13 2.13 0 1 0 2.13 2.13 2.11 2.11 0 0 0-2.13-2.13zm0 4a1.85 1.85 0 1 1 1.82-1.85 1.81 1.81 0 0 1-1.82 1.83z',
-      firstLine: 'Hi, my name is Corentin Marzin. I am a creative developer and student in fourth year at HETIC. It’s been 5 years since I developed my first website which was horrible by the way haha.',
-      secondLine: 'I like to experiment innovative technologies (currently playing with Nuxt and React native) and love to discover new ways of coding.',
-      thirdLine: 'I am currently looking for an internship/job between July and November 30.',
-      fourthLine: 'If you need more information or just to say hi here my email :',
-      email: 'corentinmarzin@free.fr'
+      pathLinkedinR: 'M21.33 11.64a2.13 2.13 0 1 0 2.13 2.13 2.11 2.11 0 0 0-2.13-2.13zm0 4a1.85 1.85 0 1 1 1.82-1.85 1.81 1.81 0 0 1-1.82 1.83z'
     }
   }
 }
