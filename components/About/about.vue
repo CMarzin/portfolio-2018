@@ -61,7 +61,7 @@ export default {
       stackTwo: 'I had the opportunity to work as a project manager on several occasions.',
       stackThree: 'From time to time I could express myself by creating the design of websites or making some motion design.',
       thirdLine: 'Today, I am currently looking for an internship/job from July 1st to November 30th. Last year I was in Berlin and this year I would like to go in Montréal. Indeed I enjoyed working with a cosmopolitan team and wish to do it again !',
-      fourthLine: 'If you need more information or just to say hi here my email :',
+      fourthLine: 'If you need more information or just to say hi, here is my email :',
       email: 'corentinmarzin@free.fr',
       pathGithubMark: `M16.3,0.1C7.3,0.1,0,7.3,0,16.3c0,7,4.5,13.3,11.2,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
           c-4.5,1-5.5-2.2-5.5-2.2c-0.3-1-0.9-1.8-1.8-2.4c-1.5-1,0.1-1,0.1-1c1,0.1,2,0.8,2.5,1.7c0.9,1.7,3,2.3,4.7,1.4c0,0,0,0,0,0

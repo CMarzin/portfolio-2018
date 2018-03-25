@@ -161,10 +161,10 @@
   height: 100vh;
   bottom: 0;
   left: 0;
+  z-index: 5;
 
   @media (max-width: 720px) {
     left: -85vw;
-    z-index: 5;
   }
 }
 
@@ -375,15 +375,28 @@
     }
 
     &-next-arrow {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 15px 0 15px 20px;
-      border-color: transparent transparent transparent $black;
-      animation: blink 2s ease infinite;
+      position: relative;
+      width: 50%;
+      height: 100%;
+      &:before {
+        content: '';
+        position: absolute;
+        // handle the letter spacing for the next text
+        top: calc(50% - 8px);
+        transform: translateY(-50%);
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 0 15px 20px;
+        border-color: transparent transparent transparent $black;
+        animation: blink 2s ease infinite;
+      }
     }
 
     &-next-text {
+      width: 50%;
+      padding-left: 25%;
       opacity: 0;
       transition: .5s ease;
       writing-mode: vertical-lr;

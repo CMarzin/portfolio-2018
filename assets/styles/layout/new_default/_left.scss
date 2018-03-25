@@ -58,15 +58,29 @@
     }
 
     &-prev-arrow {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 15px 20px 15px 0;
-      border-color: transparent $black transparent transparent;
-      animation: blink 2s ease infinite;
+      position: relative;
+      width: 50%;
+      height: 100%;
+
+      &:before{
+        content: '';
+        position: absolute;
+        // handle the letter spacing for the next text
+        top: calc(50% - 8px);
+        transform: translateY(-50%);
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 20px 15px 0;
+        border-color: transparent $black transparent transparent;
+        animation: blink 2s ease infinite;
+      }
     }
 
     &-prev-text {
+      width: 50%;
+      padding-right: 25%;
       opacity: 0;
       transition: .5s ease;
       writing-mode: vertical-lr;
@@ -100,31 +114,20 @@
     &-elements {
       position: relative;
       width: calc(100% - (100% / 6));
-      height: 100%;
       display: flex;
       flex-flow: column;
-      padding-left: spacing('medium');
-
-      @media (max-width: 720px) {
-        margin-top: 10%;
-        padding: spacing('medium');
-        height: auto;
-      }
+      padding: spacing('medium');
+      padding-top: 20%;
+      height: auto;
     }
 
     &-elements-content {
       position: relative;
       display: flex;
-      flex-flow: column;
-      height: 50%;
-      justify-content: flex-end;
-
-      @media (max-width: 720px) {
-        height: auto;
-        flex-flow: row;
-        align-items: center;
-        justify-content: flex-start;
-      }
+      height: auto;
+      flex-flow: row;
+      align-items: center;
+      justify-content: flex-start;
     }
 
 /*******************************
@@ -138,7 +141,7 @@
     }
 
     &-counter p {
-      font-size: 26px;
+      font-size: font-size('subtitle');
       font-family: $maison_mono;
       text-align: center;
 
@@ -174,16 +177,13 @@
 ********************************/
 
     &-desc {
-      position: relative;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
 
       font-size: font-size('subtitle');
-      padding-top: spacing('large');
       font-family: $maison_mono;
       line-height: 1.5;
-
-      @media (max-width: 720px) {
-        padding-top: spacing('medium');
-      }
     }
   }
 }
