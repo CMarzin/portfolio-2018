@@ -32,8 +32,6 @@ const beforeEnter = (el, store) => {
   const rightVolet = el.querySelector('.container__right-next-volet')
 
   rightVolet.setAttribute('style', 'transform: scaleY(0)')
-
-  console.log('beforeEnter')
 }
 
 export default beforeEnter

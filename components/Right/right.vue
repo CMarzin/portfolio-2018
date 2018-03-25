@@ -65,10 +65,8 @@ export default {
   methods: {
     highlightCurrentRoute: function (title) {
       if (this.$route.path === '/' + title.replace(/\s+/g, '')) {
-        console.log('coucou', title.replace(/\s+/g, ''))
         return true
       } else if (this.$route.path === '/' && title.replace(/\s+/g, '') === 'jochengerz') {
-        console.log('test')
         return true
       } else {
         return false

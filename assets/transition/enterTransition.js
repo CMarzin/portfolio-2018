@@ -1,7 +1,6 @@
 import anime from 'animejs'
 
 const enterTransition = (el, store) => {
-  console.log('enter')
   anime({
     targets: '.container__left-prev-volet',
     duration: 500,

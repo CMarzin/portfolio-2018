@@ -1,7 +1,6 @@
 import anime from 'animejs'
 
 const leaveTransition = (el, store) => {
-  console.log('leave')
   anime({
     targets: '.container__left-prev-volet',
     duration: 500,
