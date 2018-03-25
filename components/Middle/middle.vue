@@ -24,6 +24,14 @@ export default {
           this.$router.push(this.$store.state.pathToPreviousProject)
           break
       }
+    },
+    swipeListener: function (swipeTo) {
+      switch (swipeTo) {
+        case 'swipeLeft':
+          break
+        case 'swipeRight':
+          break
+      }
     }
   },
   mounted: function () {
