@@ -14,6 +14,24 @@
 <script>
 export default {
   name: 'Middle',
+  methods: {
+    keyListener: function (event) {
+      switch (event.key) {
+        case 'ArrowRight':
+          this.$router.push(this.$store.state.pathToNextProject)
+          break
+        case 'ArrowLeft':
+          this.$router.push(this.$store.state.pathToPreviousProject)
+          break
+      }
+    }
+  },
+  mounted: function () {
+    document.addEventListener('keyup', this.keyListener)
+  },
+  destroyed: function () {
+    document.removeEventListener('keyup', this.keyListener)
+  },
   computed: {
     customClassBg: function () {
       let customClass = 'bonjour-' + this.$store.state.projects[this.$store.state.pathToCurrentProject].color
@@ -26,6 +44,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
