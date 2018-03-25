@@ -119,6 +119,10 @@
       padding: spacing('medium');
       padding-top: 20%;
       height: auto;
+
+      @media (max-width: 720px) {
+        padding-top: 15%;
+      }
     }
 
     &-elements-content {
@@ -128,6 +132,10 @@
       flex-flow: row;
       align-items: center;
       justify-content: flex-start;
+
+      @media (max-width: 720px) {
+        margin-bottom: spacing('medium');
+      }
     }
 
 /*******************************
@@ -184,6 +192,12 @@
       font-size: font-size('subtitle');
       font-family: $maison_mono;
       line-height: 1.5;
+
+      @media (max-width: 720px) {
+        position: relative;
+        line-height: 1.3;
+        transform: translateY(0)
+      }
     }
   }
 }
