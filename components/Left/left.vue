@@ -1,6 +1,6 @@
 <template>
   <div class="container__left">
-    <nuxt-link class="container__left-prev-project" :to="this.$store.state.pathToPreviousProject">
+    <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToPreviousProject].titleLink" class="container__left-prev-project" :to="this.$store.state.pathToPreviousProject">
       <div :class="['container__left-prev-volet', customClassBgPrevious]"></div>
       <div class="container__left-prev-icon">
         <span class="container__left-prev-arrow"></span>
@@ -20,15 +20,6 @@
             <h1 class="container__left-title-scale" >{{ this.$store.state.currentProjectTitle }}</h1>
          </div>
         </div>
-        <!-- SHOW ARROW ON MOBILE -->
-        <!-- <div class="container__left-nav">
-          <nuxt-link class="container__left-arrow" :to="this.$store.state.pathToPreviousProject">
-            <span class="container__main-footer_arrow-left"></span>
-          </nuxt-link>
-          <nuxt-link class="container__left-arrow" :to="this.$store.state.pathToNextProject">
-            <span class="container__main-footer_arrow-right"></span>
-          </nuxt-link>
-        </div> -->
       </div>
         <div class="container__left-desc">
           <p>{{ this.$store.state.projects[this.$store.state.pathToCurrentProject].description }}</p>
@@ -64,6 +55,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>

@@ -12,30 +12,30 @@
       <p><a :href="`mailto:${this.email}`">{{this.email}}</a></p>
     </div>
     <div class="container__right-about-social">
-      <a href="https://github.com/CMarzin" target="_blank">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <a alt="Github link to Corentin Marzin" href="https://github.com/CMarzin" target="_blank">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
           <path :d="this.pathGithubMark"/>
         </svg>
       </a>
-      <a href="https://twitter.com/marz_coco" target="_blank">
+      <a alt="Twitter link Corentin Marzin" href="https://twitter.com/marz_coco" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 203.1">
           <path :d="this.pathTwitterMark" />
         </svg>
       </a>
-      <a href="https://codepen.io/Emicor/" target="_blank">
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.09 469.09">
+      <a alt="Codepen link Corentin Marzin" href="https://codepen.io/Emicor/" target="_blank">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.09 469.09">
           <path :d="this.pathCodepenRound" transform="translate(-15 -15)"/>
           <path :d="this.pathCodepenSquare" transform="translate(-15 -15)"/>
         </svg>
       </a>
-      <a href="https://unsplash.com/@emicorcatpit" target="_blank">
+      <a alt="Unsplash link to user Corentin Marzin" href="https://unsplash.com/@emicorcatpit" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
           <path :d="this.pathUnsplash"/>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/corentin-marzin-4a4371107/" target="_blank">
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.46 18">
+      <a alt="Linkedin link to user Corentin Marzin" href="https://www.linkedin.com/in/corentin-marzin-4a4371107/" target="_blank">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.46 18">
           <path :d="this.pathLinkedin"/>
           <path :d="this.pathLinkedinR"/>
         </svg>
@@ -44,7 +44,7 @@
     <div class="container__right-about-made">
       <p>Coded with 🍺 & ☕️</p>
       <p>Copyright Corentin Marzin</p>
-      <p>Code available <a href="https://github.com/CMarzin/portfolio-2018" target="_blank">here</a></p>
+      <p>Code available <a alt="Github link porftolio 2018 Corentin Marzin" href="https://github.com/CMarzin/portfolio-2018" target="_blank">here</a></p>
     </div>
   </div>
 </template>

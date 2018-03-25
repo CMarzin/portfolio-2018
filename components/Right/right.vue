@@ -17,12 +17,12 @@
         </div>
       </div>
       <div :class="['container__right-menu-content', customClassBg]" style="transform: scaleX(0);">
-        <nuxt-link v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === 'jochengerz' ? '/' : title.replace(/\s+/g, '')">
+        <nuxt-link alt="Link to Menu" v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === 'jochengerz' ? '/' : title.replace(/\s+/g, '')">
           <h3 :class="['container__main-nav_horizontal--title'], highlightCurrentRoute" >{{ title.toUpperCase() }}</h3>
           <span v-if="highlightCurrentRoute(title)" class="container__right-menu-current-path"></span>
         </nuxt-link>
       </div>
-      <nuxt-link class="container__right-next-project" :to="this.$store.state.pathToNextProject">
+      <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToNextProject].titleLink" class="container__right-next-project" :to="this.$store.state.pathToNextProject">
         <div :class="['container__right-next-volet', customClassBgNext]"></div>
         <div class="container__right-next-icon">
           <span class="container__right-next-text">NEXT</span>
@@ -135,6 +135,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
