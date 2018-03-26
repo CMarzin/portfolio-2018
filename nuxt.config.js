@@ -14,7 +14,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'porfolio-2018',
+    title: 'Corentin Marzin',
     htmlAttrs: {
       lang: 'en'
     },

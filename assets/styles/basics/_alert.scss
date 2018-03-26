@@ -1,0 +1,45 @@
+.container__alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 11;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  &-swipe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-swipe-text {
+    font-family: $maison_mono;
+    font-size: font-size('subtitle');
+    margin-bottom: spacing('large');
+  }
+
+  &-swipe svg {
+    max-width: 150px;
+  }
+
+  &-swipe-close {
+    background: $blue;
+    border: 2px solid black;
+    font-family: $maison_mono;
+    font-size: font-size('subtitle');
+    margin-top: spacing('large');
+  }
+
+  &-swipe-close p {
+    padding: spacing('medium');
+  }
+}

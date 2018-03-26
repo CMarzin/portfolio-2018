@@ -28,7 +28,6 @@ const store = () => new Vuex.Store({
         img: 'gerz.jpg',
         titleLink: 'Page description Jochen Gerz project',
         links: {
-          // moreInformation: 'https://www.edenspiekermann.com/projects/jochen-gerz/',
           seeWebsite: 'https://www.jochengerz.eu/works'
         }
       },
@@ -38,13 +37,12 @@ const store = () => new Vuex.Store({
         img: 'mywings.jpg',
         titleLink: 'Page description Mywings project',
         links: {
-          // moreInformation: 'https://www.edenspiekermann.com/projects/red-bull-mywings/',
           seeWebsite: 'http://mywings.redbull.com/fr-fr/'
         }
       },
       portfolio: {
         color: 'blue',
-        description: 'You can see my previous portfolio. The hardest part was the compatibility of the SVG mask with all browsers. I precise that I made the entire  design and coding part. You can find the code right **here**.',
+        description: 'You can see my previous portfolio. The hardest part was the compatibility of the SVG mask with all browsers. I precise that I made the entire  design and coding part.',
         img: 'portfolio.jpg',
         titleLink: 'Page description previous portfolio',
         links: {
