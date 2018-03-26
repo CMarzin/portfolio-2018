@@ -21,7 +21,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'portfolio inspired by the work of M.Mondrian, made with nuxt and babylon js' }
+      { hid: 'description', name: 'description', content: 'portfolio inspired by the work of M.Mondrian, made with nuxt' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -39,6 +39,7 @@ module.exports = {
     '@/assets/styles/main.scss'
   ],
   build: {
+    vendor: ['~/plugins/swipe-it.min.js'],
     /*
     ** Run ESLint on save
     */

@@ -25,17 +25,19 @@ export default {
           break
       }
     },
-    swipeListener: function (swipeTo) {
-      switch (swipeTo) {
-        case 'swipeLeft':
-          break
-        case 'swipeRight':
-          break
-      }
+    swipeListener: function (mySwipeIt) {
+      mySwipeIt.on('swipeLeft', () => {
+        this.$router.push(this.$store.state.pathToNextProject)
+      })
+      mySwipeIt.on('swipeRight', () => {
+        this.$router.push(this.$store.state.pathToPreviousProject)
+      })
     }
   },
   mounted: function () {
     document.addEventListener('keyup', this.keyListener)
+    let mySwipeIt = new SwipeIt('body') // eslint-disable-line
+    this.swipeListener(mySwipeIt)
   },
   destroyed: function () {
     document.removeEventListener('keyup', this.keyListener)
