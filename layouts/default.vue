@@ -79,7 +79,6 @@ export default {
   },
   methods: {
     hideSwipeMessage: function () {
-      console.log('event', event)
       const swipe = document.querySelector('.container__alert')
       anime({
         targets: '.container__alert',

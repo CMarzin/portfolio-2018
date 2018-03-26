@@ -48,6 +48,16 @@ export default {
       toggleMenu: false
     }
   },
+  mounted () {
+    const mySwipeItLeft = new SwipeIt('.container__left', { // eslint-disable-line
+      minDistance: 100
+    })
+    const mySwipeItMiddle = new SwipeIt('.container__right', { // eslint-disable-line
+      minDistance: 100
+    })
+    this.swipeListener(mySwipeItLeft)
+    this.swipeListener(mySwipeItMiddle)
+  },
   computed: {
     customClassText: function () {
       let customClass = 'txt-' + this.$store.state.projects[this.$store.state.pathToCurrentProject].color
@@ -63,6 +73,14 @@ export default {
     }
   },
   methods: {
+    swipeListener: function (mySwipeIt) {
+      mySwipeIt.on('swipeLeft', () => {
+        this.$router.push(this.$store.state.pathToNextProject)
+      })
+      mySwipeIt.on('swipeRight', () => {
+        this.$router.push(this.$store.state.pathToPreviousProject)
+      })
+    },
     highlightCurrentRoute: function (title) {
       if (this.$route.path === '/' + title.replace(/\s+/g, '')) {
         return true
