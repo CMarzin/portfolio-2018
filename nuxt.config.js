@@ -38,6 +38,9 @@ module.exports = {
     // SCSS file in the project
     '@/assets/styles/main.scss'
   ],
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ],
   build: {
     vendor: ['~/plugins/swipe-it.min.js'],
     /*

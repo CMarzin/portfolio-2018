@@ -28,7 +28,14 @@ export default {
     'Right': Right
   },
   beforeRouteLeave (to, from, next) {
-    beforeRouteLeaveTransition(this.$el, this.$store, next)
+    const regex = /(\/.*\/)/g
+    const str = to.path
+    let newPath = str.replace(regex, '/')
+    if (to.path !== newPath) {
+      next({ path: newPath })
+    } else {
+      beforeRouteLeaveTransition(this.$el, this.$store, next)
+    }
   },
   transition: {
     css: false,
