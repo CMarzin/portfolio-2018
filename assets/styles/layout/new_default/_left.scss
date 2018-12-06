@@ -17,6 +17,15 @@
     &-title-content {
       position: relative;
       width: fit-content;
+
+      h1 {
+        @media (max-width: 320px) {
+          font-size: 26px;
+        }
+        @media (min-width: 321px) and (max-width: 720px) {
+          font-size: 30px;
+        }
+      }
     }
 
     &-prev-project {

@@ -1,6 +1,6 @@
 <template>
   <div class="container__main">
-      <Left classTitle="container__left-title-long" ></Left>
+      <Left classTitle="container__left-title-long"></Left>
       <Middle></Middle>
       <Right></Right>
   </div>

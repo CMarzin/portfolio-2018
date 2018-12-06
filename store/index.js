@@ -11,6 +11,7 @@ const store = () => new Vuex.Store({
     counterProject: 0,
     currentProjectTitle: '',
     projectTitle: [
+      'influenceurs',
       'jochen gerz',
       'mywings',
       'portfolio',
@@ -22,6 +23,15 @@ const store = () => new Vuex.Store({
       'cher ami'
     ],
     projects: {
+      influenceurs: {
+        color: 'blue',
+        description: 'I worked this project during my time at Leeroy Creative Agency. This agency is based at Montréal, I spent 4 months on this project, my mission was to rebuild the website from scratch. I used Nuxt to build it and to make the project easily maintainable I writed a lot of documentation with Vuepress.',
+        img: 'influ.jpg',
+        titleLink: 'Page description Influenceurs project',
+        links: {
+          seeWebsite: 'https://www.influenceurs.quebec'
+        }
+      },
       jochengerz: {
         color: 'red',
         description: 'I worked on this artistic project at Edenspiekermann. It was challenging because I had no connection with the previous team. I had to manage alone to understand how the website worked. Finally, I could add new functionalities, fix bugs, update the pages and allow the website launch.',

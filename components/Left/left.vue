@@ -17,7 +17,7 @@
         <div :class="['title', 'container__left-title', customClassText]">
          <div class="container__left-title-content">
             <span :class="['container__left-title-volet']"></span>
-            <h1 class="container__left-title-scale" >{{ this.$store.state.currentProjectTitle }}</h1>
+            <h1 :class="['container__left-title-scale', classTitle]" >{{ this.$store.state.currentProjectTitle }}</h1>
          </div>
         </div>
       </div>
@@ -32,6 +32,12 @@
 <script>
 export default {
   name: 'Left',
+  props: {
+    classTitle: {
+      default: '',
+      type: String
+    }
+  },
   data () {
     return {}
   },
