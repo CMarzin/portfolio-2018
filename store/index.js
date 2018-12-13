@@ -25,7 +25,7 @@ const store = () => new Vuex.Store({
     projects: {
       influenceurs: {
         color: 'blue',
-        description: 'I worked this project during my time at Leeroy Creative Agency. This agency is based at Montréal, I spent 4 months on this project, my mission was to rebuild the website from scratch. I used Nuxt to build it and to make the project easily maintainable I writed a lot of documentation with Vuepress.',
+        description: 'I worked on this project during my internship at Leeroy Creative Agency. It\'s an agency based in Montréal, I spent 4 months on this project, my mission was to rebuild the website from scratch with Nuxt. Also to make the project easily maintainable I wrote a lot of documentation using Vuepress.',
         img: 'influ.jpg',
         titleLink: 'Page description Influenceurs project',
         links: {

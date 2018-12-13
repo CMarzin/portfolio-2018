@@ -75,7 +75,7 @@ export default {
       opacity: 1
     })
 
-    document.addEventListener('touchstart', this.hideSwipeMessage)
+    if (window.innerWidth < 768) document.addEventListener('touchstart', this.hideSwipeMessage)
   },
   methods: {
     hideSwipeMessage: function () {
