@@ -1,7 +1,7 @@
 {
   "name": "porfolio-2018",
   "version": "1.0.0",
-  "description": "portfolio inspired by the work of M.Mondrian, made with nuxt and babylon js",
+  "description": "portfolio inspired by the work of M.Mondrian, made with nuxt",
   "author": "CMarzin <corentinmarzin@Gmail.com>",
   "private": true,
   "scripts": {

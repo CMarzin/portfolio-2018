@@ -23,13 +23,13 @@
           <path :d="this.pathTwitterMark" />
         </svg>
       </a>
-      <a title="Codepen link Corentin Marzin" href="https://codepen.io/Emicor/" target="_blank">
+      <a title="Codepen link Corentin Marzin" href="https://codepen.io/marz_coco/" target="_blank">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.09 469.09">
           <path :d="this.pathCodepenRound" transform="translate(-15 -15)"/>
           <path :d="this.pathCodepenSquare" transform="translate(-15 -15)"/>
         </svg>
       </a>
-      <a title="Unsplash link to user Corentin Marzin" href="https://unsplash.com/@emicorcatpit" target="_blank">
+      <a title="Unsplash link to user Corentin Marzin" href="https://unsplash.com/marz_coco" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
           <path :d="this.pathUnsplash"/>
         </svg>
@@ -55,12 +55,12 @@ export default {
   data () {
     return {
       firstLine: 'Hi, my name is Corentin Marzin.',
-      status: 'I am a Creative developer and student in fourth year at HETIC in France.',
-      secondLine: 'I like to experiment innovative technologies (currently playing with Nuxt and React native) and love to discover new ways of coding.',
-      stackOne: 'I currently use Vue, Nuxt, React, React native, Ruby on rails (mostly only api) GIT, Gulp and some PHP.',
+      status: 'I am a Creative Developer, young jury awwwards and student in fifth year at HETIC in France.',
+      secondLine: 'I like to experiment innovative technologies and love to discover new ways of coding.',
+      stackOne: 'I currently mostly use Vue, Nuxt and Laravel.',
       stackTwo: 'I had the opportunity to work as a project manager on several occasions.',
       stackThree: 'From time to time I could express myself by creating the design of websites or making some svg animation.',
-      thirdLine: 'Last year I was in Berlin. Today, I am currently working at Leeroy creative agency in Montréal.',
+      thirdLine: 'Last year I was in Montreal, and the year before at Berlin. Today, I am currently working at Allegro Musique in Paris.',
       fourthLine: 'If you need more information or just to say hi, here is my email :',
       email: 'corentinmarzin@free.fr',
       pathGithubMark: `M16.3,0.1C7.3,0.1,0,7.3,0,16.3c0,7,4.5,13.3,11.2,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8

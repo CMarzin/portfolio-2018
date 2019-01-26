@@ -38,9 +38,21 @@
 </template>
 
 <script>
+
 import anime from 'animejs'
+import { think } from 'cowsay'
+
 export default {
   mounted () {
+    console.log(think({
+      text: 'Hello there fellow developer ;)',
+      eyes: 'oo',
+      wrapLength: 40,
+      wrap: false
+    }))
+
+    console.log('%c Business card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
+
     const loader = document.querySelector('.container__loader')
     anime({
       targets: '.fulfilling-square-spinner',

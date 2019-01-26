@@ -5,8 +5,8 @@ module.exports = {
     extendRoutes (routes, resolve) {
       routes.push({
         path: '/',
-        component: resolve(__dirname, 'pages/jochengerz.vue'),
-        alias: '/jochengerz'
+        component: resolve(__dirname, 'pages/influenceurs.vue'),
+        alias: '/influenceurs'
       })
     }
   },

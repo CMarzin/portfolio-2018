@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import { think } from 'cowsay'
-
 import Left from '~/components/Left/left'
 import Middle from '~/components/Middle/middle'
 import Right from '~/components/Right/right'
@@ -56,14 +54,6 @@ export default {
     'Left': Left,
     'Middle': Middle,
     'Right': Right
-  },
-  mounted () {
-    console.log(think({
-      text: 'Hello there',
-      eyes: 'oo',
-      wrapLength: 40,
-      wrap: false
-    }))
   }
 }
 </script>
