@@ -51,7 +51,7 @@ export default {
       wrap: false
     }))
 
-    console.log('%c Business card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
+    console.log('%c Cli card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
 
     const loader = document.querySelector('.container__loader')
     anime({
