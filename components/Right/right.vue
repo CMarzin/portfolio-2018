@@ -17,7 +17,7 @@
         </div>
       </div>
       <div :class="['container__right-menu-content', customClassBg]" style="transform: scaleX(0);">
-        <nuxt-link alt="Link to Menu" v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === 'jochengerz' ? '/' : title.replace(/\s+/g, '')">
+        <nuxt-link alt="Link to Menu" v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === $store.state.projectTitle[0] ? '/' : title.replace(/\s+/g, '')">
           <h3 :class="['container__main-nav_horizontal--title'], highlightCurrentRoute" >{{ title.toUpperCase() }}</h3>
           <span v-if="highlightCurrentRoute(title)" class="container__right-menu-current-path"></span>
         </nuxt-link>
@@ -84,7 +84,7 @@ export default {
     highlightCurrentRoute: function (title) {
       if (this.$route.path === '/' + title.replace(/\s+/g, '')) {
         return true
-      } else if (this.$route.path === '/' && title.replace(/\s+/g, '') === 'jochengerz') {
+      } else if (this.$route.path === '/' && title.replace(/\s+/g, '') === this.$store.state.projectTitle[0]) {
         return true
       } else {
         return false
