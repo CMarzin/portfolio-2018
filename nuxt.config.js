@@ -39,20 +39,38 @@ module.exports = {
     '@/assets/styles/main.scss'
   ],
   plugins: [
-    { src: '~plugins/ga.js', ssr: false }
+    {
+      src: '~plugins/ga.js',
+      ssr: false
+    },
+    {
+      src: '~/plugins/swipe-it.min.js',
+      ssr: false
+    }
   ],
+  modules: [
+    'nuxt-webfontloader'
+  ],
+  webfontloader: {
+    custom: {
+      families: ['EksellDisplayLarge', 'MaisonNeueBook', 'MaisonNeueMono'],
+      urls: ['/fonts/fonts.css']
+    }
+  },
   build: {
-    vendor: ['~/plugins/swipe-it.min.js'],
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /node_modules\/(?!(dom7|ssr-window)\/).*/,
+          hardSource: true,
+          parallel: true,
+          cache: true
         })
       }
     }

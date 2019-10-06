@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Eksell Display Large';
+  font-display: swap;
+  src: url('./EksellDisplay-Large.eot'); /* IE9 Compat Modes */
+  src: url('./EksellDisplay-Large.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./EksellDisplay-Large.woff') format('woff'), /* Modern Browsers */
+       url('./EksellDisplay-Large.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./EksellDisplay-Large.svg#c7cf8896a6e72b7f3b94d04548a9d8b7') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Maison Neue Book';
+  font-display: swap;
+  src: url('./MaisonNeue-Book.eot'); /* IE9 Compat Modes */
+  src: url('./MaisonNeue-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./MaisonNeue-Book.woff') format('woff'), /* Modern Browsers */
+       url('./MaisonNeue-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./MaisonNeue-Book.svg#cfe9c4d435b13936a17ea5090528f1ab') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
+
+/* @font-face {
+  font-family: 'Maison Neue Book Italic';
+  font-display: swap;
+  src: url('./MaisonNeue-BookItalic.eot');
+  src: url('./MaisonNeue-BookItalic.eot?#iefix') format('embedded-opentype'),
+       url('./MaisonNeue-BookItalic.woff') format('woff'),
+       url('./MaisonNeue-BookItalic.ttf')  format('truetype'),
+       url('./MaisonNeue-BookItalic.svg#bbed207300b15245656f8e98a9d8ff7e') format('svg');
+  font-style:   italic;
+  font-weight:  400;
+} */
+
+@font-face {
+  font-family: 'Maison Neue Mono';
+  font-display: swap;
+  src: url('./MaisonNeue-Mono.eot'); /* IE9 Compat Modes */
+  src: url('./MaisonNeue-Mono.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./MaisonNeue-Mono.woff') format('woff'), /* Modern Browsers */
+       url('./MaisonNeue-Mono.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./MaisonNeue-Mono.svg#af2fa94b953e46dc77e59983b9e9c303') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
