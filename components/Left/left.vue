@@ -23,7 +23,7 @@
       </div>
         <div class="container__left-desc">
           <p>{{ this.$store.state.projects[this.$store.state.pathToCurrentProject].description }}</p>
-          <a v-if="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation">{{this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation}}</a>
+          <a v-if="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation" rel="noopener" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation">{{this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation}}</a>
         </div>
     </div>
   </div>

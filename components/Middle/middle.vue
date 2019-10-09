@@ -4,7 +4,7 @@
       <span class="container__middle-photo-volet"></span>
       <img :src="this.$store.state.projects[this.$store.state.pathToCurrentProject].img" alt="">
     </div>
-    <a class="container__middle-website" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.seeWebsite" target="_blank">
+    <a class="container__middle-website" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.seeWebsite" rel="noopener" target="_blank">
       <p class="container__middle-website-text">SEE WEBSITE</p>
       <span :class="['container__middle-website-volet', customClassBg]"></span>
     </a>
@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted: function () {
-    document.addEventListener('keyup', this.keyListener)
+    document.addEventListener('keyup', this.keyListener, {passive: true})
   },
   destroyed: function () {
     document.removeEventListener('keyup', this.keyListener)
