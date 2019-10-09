@@ -21,7 +21,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'portfolio inspired by the work of M.Mondrian, made with nuxt' }
+      { hid: 'description', name: 'description', content: 'Portfolio inspired by the work of M.Mondrian' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -53,7 +53,7 @@ module.exports = {
   ],
   webfontloader: {
     custom: {
-      families: ['EksellDisplayLarge', 'MaisonNeueBook', 'MaisonNeueMono'],
+      families: ['EksellDisplayLarge', 'MaisonNeueMono'],
       urls: ['/fonts/fonts.css']
     }
   },

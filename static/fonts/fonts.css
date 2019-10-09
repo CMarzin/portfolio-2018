@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'Eksell Display Large';
-  font-display: swap;
   src: url('./EksellDisplay-Large.eot'); /* IE9 Compat Modes */
   src: url('./EksellDisplay-Large.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('./EksellDisplay-Large.woff') format('woff'), /* Modern Browsers */
@@ -11,18 +10,17 @@
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Maison Neue Book';
-  font-display: swap;
-  src: url('./MaisonNeue-Book.eot'); /* IE9 Compat Modes */
-  src: url('./MaisonNeue-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./MaisonNeue-Book.woff') format('woff'), /* Modern Browsers */
-       url('./MaisonNeue-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./MaisonNeue-Book.svg#cfe9c4d435b13936a17ea5090528f1ab') format('svg'); /* Legacy iOS */
+  src: url('./MaisonNeue-Book.eot');
+  src: url('./MaisonNeue-Book.eot?#iefix') format('embedded-opentype'),
+       url('./MaisonNeue-Book.woff') format('woff'),
+       url('./MaisonNeue-Book.ttf')  format('truetype'),
+       url('./MaisonNeue-Book.svg#cfe9c4d435b13936a17ea5090528f1ab') format('svg');
   font-style:   normal;
   font-weight:  400;
   font-display: swap;
-}
+} */
 
 /* @font-face {
   font-family: 'Maison Neue Book Italic';
