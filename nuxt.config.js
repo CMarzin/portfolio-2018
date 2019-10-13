@@ -24,7 +24,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Portfolio inspired by the work of M.Mondrian' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: '/fonts/fonts.css' }
     ]
   },
   /*

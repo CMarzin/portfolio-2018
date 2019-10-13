@@ -12,25 +12,13 @@
     </div>
     <div class="container__alert">
       <div class="container__alert-swipe">
-        <div class="container__alert-swipe-text">
-          <p>Swipe to navigate</p>
-        </div>
-        <svg viewBox="0 0 30 37.5" xmlns="http://www.w3.org/2000/svg">
-          <g fill-rule="evenodd">
-            <path d="M5.854 6.146a.5.5 0 1 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L4.707 4H11.5a.5.5 0 0 1 0 1H4.704zM23.146 6.146a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 0 0-.708.708L24.293 4H17.5a.5.5 0 1 0 0 1h6.796zM24.997 17v-2.502a1.495 1.495 0 0 0-2-1.412v2.41a.507.507 0 0 1-.5.504.507.507 0 0 1-.5-.503v-2.999a1.495 1.495 0 0 0-2-1.412v3.41a.507.507 0 0 1-.5.504.507.507 0 0 1-.5-.503v-2.999a1.495 1.495 0 0 0-2-1.412v4.41a.507.507 0 0 1-.5.504.507.507 0 0 1-.5-.503V6.498c0-.827-.666-1.498-1.5-1.498-.828 0-1.5.675-1.5 1.498v9.24l-1.32-2.285a1.495 1.495 0 0 0-2.047-.548 1.502 1.502 0 0 0-.55 2.048l1.45 2.512c.458.987.576 2.279 1.38 4.314.883 2.24 2.087 3.82 2.087 4.221a.51.51 0 0 0-.5.5c0 .276.228.5.51.5h8.98a.51.51 0 0 0 .51-.5.504.504 0 0 0-.5-.5c0-1.47 2-4.989 2-9z"/>
-          </g>
-          <g font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif" font-size="5" font-weight="bold">
-            <text y="45">
-              Created by Pham Thi Dieu Linh
-            </text>
-            <text y="50">
-              from the Noun Project
-            </text>
-          </g>
-        </svg>
-        <div style="opacity: 1" class="container__alert-swipe-close">
-           <p>I get it</p>
-        </div>
+
+        <p class="container__alert-swipe-text">
+          Swipe to navigate
+        </p>
+
+        <svg id="container__alert-swipe-hand" fill="#ffffff" enable-background="new 0 0 400 400" height="256" viewBox="0 0 400 400" width="256" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(45deg)"><path d="m232.162 96.001c-2.852 0-5.524.769-7.838 2.094v-5.931c0-8.912-7.25-16.162-16.162-16.162-2.979 0-5.763.824-8.162 2.236v-10.237c0-8.822-7.178-16-16-16s-16 7.178-16 16v6.165c-2.357-1.368-5.084-2.165-8-2.165-8.822 0-16 7.178-16 16v78.993l-15.754-19.701c-2.897-3.624-7.036-5.883-11.651-6.359-4.62-.481-9.128.89-12.705 3.845-6.88 5.684-8.279 15.533-3.256 22.911l51.779 76.033c5.236 7.688 13.916 12.278 23.219 12.278h44.277c15.489 0 28.091-12.602 28.091-28.091v-116.071c0-8.734-7.104-15.838-15.838-15.838zm7.838 131.909c0 11.078-9.013 20.091-20.091 20.091h-44.277c-6.653 0-12.861-3.283-16.606-8.782l-51.779-76.032c-2.685-3.942-1.937-9.204 1.739-12.241 1.912-1.579 4.321-2.307 6.788-2.054 2.466.255 4.676 1.461 6.225 3.397l22.878 28.61c1.062 1.326 2.844 1.84 4.447 1.276 1.604-.562 2.677-2.075 2.677-3.774v-90.4c0-4.411 3.589-8 8-8s8 3.589 8 8v72.4c0 2.209 1.791 4 4 4s4-1.791 4-4v-92.4c0-4.411 3.589-8 8-8s8 3.589 8 8v92.4c0 2.209 1.791 4 4 4s4-1.791 4-4v-68.238c0-4.501 3.661-8.162 8.162-8.162s8.162 3.661 8.162 8.162v72.238c0 2.209 1.791 4 4 4s4-1.791 4-4v-52.562c0-4.322 3.516-7.838 7.838-7.838s7.838 3.516 7.838 7.838v116.071z"/><path d="m71.184 60.588-.96-.586h51.553l-.959.586c-1.886 1.152-2.48 3.614-1.329 5.499.755 1.234 2.07 1.916 3.418 1.916.711 0 1.431-.189 2.081-.587l13.098-8c1.189-.727 1.915-2.021 1.915-3.414s-.726-2.687-1.915-3.413l-13.098-8.001c-1.883-1.154-4.347-.558-5.498 1.328-1.152 1.885-.558 4.347 1.328 5.498l.962.588h-51.559l.962-.588c1.886-1.151 2.48-3.613 1.328-5.498-1.151-1.886-3.615-2.482-5.498-1.328l-13.099 8.001c-1.188.725-1.914 2.019-1.914 3.413s.726 2.688 1.915 3.414l13.099 8c.651.397 1.37.587 2.081.587 1.348 0 2.664-.682 3.418-1.916 1.151-1.886.556-4.348-1.329-5.499z"/></svg>
+
       </div>
       <div class="container__alert-keyboard"></div>
     </div>
@@ -54,6 +42,7 @@ export default {
     console.log('%c Cli card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
 
     const loader = document.querySelector('.container__loader')
+    const swipe = document.querySelector('.container__alert')
     anime({
       targets: '.fulfilling-square-spinner',
       duration: 1000,
@@ -75,6 +64,28 @@ export default {
           scaleY: 0
         }).finished.then(() => {
           loader.setAttribute('style', 'display: none')
+          anime({
+            targets: '#container__alert-swipe-hand',
+            duration: 2000,
+            easing: [0.25, 0.1, 0.24, 1.01],
+            rotate: [
+              {value: 0},
+              {value: 45},
+              {value: 0},
+              {value: 45}
+            ]
+          })
+
+          anime({
+            targets: '.container__alert',
+            delay: 1200,
+            duration: 500,
+            easing: [0.25, 0.1, 0.24, 1.01],
+            transformOrigin: ['0% 50% 0', '0% 50% 0'],
+            scaleX: 0
+          }).finished.then(() => {
+            swipe.setAttribute('style', 'display: none')
+          })
         })
       })
     })
@@ -87,20 +98,6 @@ export default {
       opacity: 1
     })
 
-    if (window.innerWidth < 768) document.addEventListener('touchstart', this.hideSwipeMessage, {passive: true})
-  },
-  methods: {
-    hideSwipeMessage: function () {
-      const swipe = document.querySelector('.container__alert')
-      anime({
-        targets: '.container__alert',
-        duration: 500,
-        easing: [0.25, 0.1, 0.24, 1.01],
-        opacity: 0
-      }).finished.then(() => {
-        swipe.setAttribute('style', 'display: none')
-      })
-    }
   }
 }
 </script>
