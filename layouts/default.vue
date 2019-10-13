@@ -32,72 +32,93 @@ import { think } from 'cowsay'
 
 export default {
   mounted () {
-    console.log(think({
-      text: 'Hello there fellow developer ;)',
-      eyes: 'oo',
-      wrapLength: 40,
-      wrap: false
-    }))
+    this.logger()
 
-    console.log('%c Cli card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
+    this.loader()
 
-    const loader = document.querySelector('.container__loader')
-    const swipe = document.querySelector('.container__alert')
-    anime({
-      targets: '.fulfilling-square-spinner',
-      duration: 1000,
-      easing: [0.25, 0.1, 0.24, 1.01],
-      rotate: '1turn'
-    }).finished.then(() => {
+    if (matchMedia) {
+      const mq = window.matchMedia('(max-width: 426px)')
+      if (mq.matches) {
+        const mySwipeIt = new SwipeIt('.container__alert', { // eslint-disable-line
+          minDistance: 50
+        })
+
+        this.swipeListener(mySwipeIt)
+      }
+    }
+  },
+  methods: {
+    loader () {
+      const loader = document.querySelector('.container__loader')
       anime({
-        targets: '.spinner-inner',
+        targets: '.fulfilling-square-spinner',
         duration: 1000,
         easing: [0.25, 0.1, 0.24, 1.01],
-        transformOrigin: ['50% 100% 0', '50% 100% 0'],
-        scaleY: 1
+        rotate: '1turn'
       }).finished.then(() => {
         anime({
-          targets: '.container__loader',
-          duration: 500,
+          targets: '.spinner-inner',
+          duration: 1000,
           easing: [0.25, 0.1, 0.24, 1.01],
-          transformOrigin: ['100% 0% 0', '100% 0% 0'],
-          scaleY: 0
+          transformOrigin: ['50% 100% 0', '50% 100% 0'],
+          scaleY: 1
         }).finished.then(() => {
-          loader.setAttribute('style', 'display: none')
           anime({
-            targets: '#container__alert-swipe-hand',
-            duration: 2000,
-            easing: [0.25, 0.1, 0.24, 1.01],
-            rotate: [
-              {value: 0},
-              {value: 45},
-              {value: 0},
-              {value: 45}
-            ]
-          })
-
-          anime({
-            targets: '.container__alert',
-            delay: 1200,
+            targets: '.container__loader',
             duration: 500,
             easing: [0.25, 0.1, 0.24, 1.01],
-            transformOrigin: ['0% 50% 0', '0% 50% 0'],
-            scaleX: 0
+            transformOrigin: ['100% 0% 0', '100% 0% 0'],
+            scaleY: 0
           }).finished.then(() => {
-            swipe.setAttribute('style', 'display: none')
+            loader.setAttribute('style', 'display: none')
+            anime({
+              targets: '#container__alert-swipe-hand',
+              duration: 3000,
+              loop: true,
+              easing: [0.25, 0.1, 0.24, 1.01],
+              rotate: [
+                {value: 0},
+                {value: 45},
+                {value: 0},
+                {value: 45}
+              ]
+            })
           })
         })
       })
-    })
 
-    anime({
-      targets: '.container__alert-swipe-close',
-      delay: 500,
-      duration: 500,
-      easing: [0.25, 0.1, 0.24, 1.01],
-      opacity: 1
-    })
+      anime({
+        targets: '.container__alert-swipe-close',
+        delay: 500,
+        duration: 500,
+        easing: [0.25, 0.1, 0.24, 1.01],
+        opacity: 1
+      })
+    },
+    logger () {
+      console.log(think({
+        text: 'Hello there fellow developer ;)',
+        eyes: 'oo',
+        wrapLength: 40,
+        wrap: false
+      }))
 
+      console.log('%c Cli card /' + '%c npx cmarzin', 'color:red', 'color:#f5c316')
+    },
+    swipeListener (mySwipeIt) {
+      mySwipeIt.on('swipeLeft', () => {
+        const swipe = document.querySelector('.container__alert')
+        anime({
+          targets: '.container__alert',
+          duration: 500,
+          easing: [0.25, 0.1, 0.24, 1.01],
+          transformOrigin: ['0% 50% 0', '0% 50% 0'],
+          scaleX: 0
+        }).finished.then(() => {
+          swipe.setAttribute('style', 'display: none')
+        })
+      })
+    }
   }
 }
 </script>

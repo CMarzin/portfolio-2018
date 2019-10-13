@@ -49,14 +49,19 @@ export default {
     }
   },
   mounted () {
-    const mySwipeItLeft = new SwipeIt('.container__left', { // eslint-disable-line
-      minDistance: 100
-    })
-    const mySwipeItMiddle = new SwipeIt('.container__right', { // eslint-disable-line
-      minDistance: 100
-    })
-    this.swipeListener(mySwipeItLeft)
-    this.swipeListener(mySwipeItMiddle)
+    if (matchMedia) {
+      const mq = window.matchMedia('(max-width: 426px)')
+      if (mq.matches) {
+        const mySwipeItLeft = new SwipeIt('.container__left', { // eslint-disable-line
+          minDistance: 100
+        })
+      const mySwipeItMiddle = new SwipeIt('.container__right', { // eslint-disable-line
+          minDistance: 100
+        })
+        this.swipeListener(mySwipeItLeft)
+        this.swipeListener(mySwipeItMiddle)
+      }
+    }
   },
   computed: {
     customClassText: function () {
