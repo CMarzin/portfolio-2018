@@ -55,12 +55,12 @@ export default {
   data () {
     return {
       firstLine: 'Hi, my name is Corentin Marzin.',
-      status: 'I am a Creative Developer, young jury awwwards and student in fifth year at HETIC in France.',
+      status: 'I am a Creative Developer, young jury awwwards and graduated from HETIC in France.',
       secondLine: 'I like to experiment innovative technologies and love to discover new ways of coding.',
-      stackOne: 'I currently mostly use Vue, Nuxt and Laravel.',
+      stackOne: 'I currently mostly use Vue, Nuxt.',
       stackTwo: 'I had the opportunity to work as a project manager on several occasions.',
       stackThree: 'From time to time I could express myself by creating the design of websites or making some svg animation.',
-      thirdLine: 'Last year I was in Montreal, and the year before at Berlin. Today, I am currently working at Allegro Musique in Paris.',
+      thirdLine: 'I worked at Edenspiekermann in Berlin, Leeroy in Montreal and Allegro Musique at Clichy near Paris. Today, I am currently working at Colorz in Paris.',
       fourthLine: 'If you need more information or just to say hi, here is my email :',
       email: 'corentinmarzin@free.fr',
       pathGithubMark: `M16.3,0.1C7.3,0.1,0,7.3,0,16.3c0,7,4.5,13.3,11.2,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
