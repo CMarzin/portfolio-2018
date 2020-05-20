@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="container__alert">
+    <!-- <div class="container__alert">
       <div class="container__alert-swipe">
 
         <p class="container__alert-swipe-text">
@@ -21,7 +21,7 @@
 
       </div>
       <div class="container__alert-keyboard"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 

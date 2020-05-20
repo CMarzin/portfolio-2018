@@ -1,11 +1,23 @@
+import axios from 'axios'
+const dynamicRoutes = () => {
+  return axios
+    .get('http://admin.cocoweb.fr/wp-json/wp/v2/posts')
+    .then((res) => {
+      return res.data.map(post => `/${post.slug.replace(/-/g, '')}`)
+    })
+}
+
 module.exports = {
+  generate: {
+    routes: dynamicRoutes
+  },
   router: {
     base: '/',
     middleware: 'routing',
     extendRoutes (routes, resolve) {
       routes.push({
         path: '/',
-        component: resolve(__dirname, 'pages/influenceurs.vue'),
+        component: resolve(__dirname, 'pages/index.vue'),
         alias: '/influenceurs'
       })
     }

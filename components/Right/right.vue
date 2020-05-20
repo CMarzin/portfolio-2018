@@ -22,7 +22,7 @@
           <span v-if="highlightCurrentRoute(title)" class="container__right-menu-current-path"></span>
         </nuxt-link>
       </div>
-      <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToNextProject].titleLink" class="container__right-next-project" :to="this.$store.state.pathToNextProject">
+      <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToNextProject].title_link" class="container__right-next-project" :to="this.$store.state.pathToNextProject">
         <div :class="['container__right-next-volet', customClassBgNext]"></div>
         <div class="container__right-next-icon">
           <span class="container__right-next-text">NEXT</span>
@@ -98,7 +98,7 @@ export default {
     openMenu: function () {
       if (this.toggleMenu) {
         this.toggleMenu = false
-        this.$store.state.stateMenu = this.toggleMenu
+        this.$store.commit('updateStateMenu', this.toggleMenu)
         anime({
           targets: '.container__right-menu-content',
           duration: 500,
@@ -115,7 +115,7 @@ export default {
           scaleX: 1
         })
         this.toggleMenu = true
-        this.$store.state.stateMenu = this.toggleMenu
+        this.$store.commit('updateStateMenu', this.toggleMenu)
       }
     },
     openAbout: function () {

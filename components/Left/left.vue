@@ -1,6 +1,6 @@
 <template>
   <div class="container__left">
-    <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToPreviousProject].titleLink" class="container__left-prev-project" :to="this.$store.state.pathToPreviousProject">
+    <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToPreviousProject].title_link" class="container__left-prev-project" :to="this.$store.state.pathToPreviousProject">
       <div :class="['container__left-prev-volet', customClassBgPrevious]"></div>
       <div class="container__left-prev-icon">
         <span class="container__left-prev-arrow"></span>
@@ -23,7 +23,6 @@
       </div>
         <div class="container__left-desc">
           <p>{{ this.$store.state.projects[this.$store.state.pathToCurrentProject].description }}</p>
-          <a v-if="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation" rel="noopener" :href="this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation">{{this.$store.state.projects[this.$store.state.pathToCurrentProject].links.moreInformation}}</a>
         </div>
     </div>
   </div>
@@ -39,7 +38,9 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      console
+    }
   },
   computed: {
     customClassText: function () {
