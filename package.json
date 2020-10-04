@@ -16,13 +16,13 @@
   "dependencies": {
     "animejs": "2.2.0",
     "cowsay": "1.2.1",
-    "cross-env": "5.1.4",
-    "node-sass": "4.13.1",
     "nuxt": "^2.0.0",
-    "nuxt-webfontloader": "^1.0.0",
-    "sass-loader": "6.0.7"
+    "nuxt-webfontloader": "^1.0.0"
   },
   "devDependencies": {
+    "sass-loader": "6.0.7",
+    "cross-env": "5.1.4",
+    "node-sass": "4.13.1",
     "babel-eslint": "7.2.3",
     "eslint": "4.19.1",
     "eslint-config-standard": "10.2.1",
