@@ -1,43 +1,43 @@
 <template>
   <div class="container__right-about-description" style="opacity: 0">
     <div class="container__right-about-text">
-      <p>{{this.firstLine}}</p>
-      <p>{{this.status}}</p>
-      <p>{{this.secondLine}}</p>
-      <p>{{this.stackOne}}</p>
-      <p>{{this.stackTwo}}</p>
-      <p>{{this.stackThree}}</p>
-      <p>{{this.thirdLine}}</p>
-      <p>{{this.fourthLine}}</p>
-      <p><a :href="`mailto:${this.email}`">{{this.email}}</a></p>
+      <p>{{firstLine}}</p>
+      <p>{{status}}</p>
+      <p>{{secondLine}}</p>
+      <p>{{stackOne}}</p>
+      <p>{{stackTwo}}</p>
+      <p>{{stackThree}}</p>
+      <p>{{thirdLine}}</p>
+      <p>{{fourthLine}}</p>
+      <p><a :href="`mailto:${email}`">{{email}}</a></p>
     </div>
     <div class="container__right-about-social">
       <a title="Github link to Corentin Marzin" href="https://github.com/CMarzin" rel="noopener" target="_blank">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-          <path :d="this.pathGithubMark"/>
+          <path :d="pathGithubMark"/>
         </svg>
       </a>
       <a title="Twitter link Corentin Marzin" href="https://twitter.com/marz_coco" rel="noopener" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 203.1">
-          <path :d="this.pathTwitterMark" />
+          <path :d="pathTwitterMark" />
         </svg>
       </a>
       <a title="Codepen link Corentin Marzin" href="https://codepen.io/marz_coco/" rel="noopener" target="_blank">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.09 469.09">
-          <path :d="this.pathCodepenRound" transform="translate(-15 -15)"/>
-          <path :d="this.pathCodepenSquare" transform="translate(-15 -15)"/>
+          <path :d="pathCodepenRound" transform="translate(-15 -15)"/>
+          <path :d="pathCodepenSquare" transform="translate(-15 -15)"/>
         </svg>
       </a>
       <a title="Unsplash link to user Corentin Marzin" href="https://unsplash.com/marz_coco" rel="noopener" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <path :d="this.pathUnsplash"/>
+          <path :d="pathUnsplash"/>
         </svg>
       </a>
       <a title="Linkedin link to user Corentin Marzin" href="https://www.linkedin.com/in/corentin-marzin-4a4371107/" rel="noopener" target="_blank">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.46 18">
-          <path :d="this.pathLinkedin"/>
-          <path :d="this.pathLinkedinR"/>
+          <path :d="pathLinkedin"/>
+          <path :d="pathLinkedinR"/>
         </svg>
       </a>
     </div>

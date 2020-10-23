@@ -4,7 +4,7 @@ export default function ({ route, store }) {
   let formatTitle = []
 
   for (let i = 0; i < ProjectTitle.length; i++) {
-    formatTitle.push(ProjectTitle[i].replace(/\s+/g, ''))
+    formatTitle.push(ProjectTitle[i].link.replace(/\s+/g, ''))
   }
 
   let currentPathName = route.name && route.name !== 'index' ? route.name : formatTitle[0]
@@ -42,7 +42,7 @@ export default function ({ route, store }) {
 
   store.commit('updateCounterProject', indexOfCurrentProject)
 
-  currentProjectTitle = currentProjectTitle.toUpperCase()
+  currentProjectTitle = currentProjectTitle.label.toUpperCase()
 
   store.commit('updateCurrentProjectTitle', currentProjectTitle)
 }

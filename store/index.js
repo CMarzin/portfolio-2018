@@ -60,13 +60,18 @@ export const actions = {
           acf
         }))
 
+      console.log('posts', posts)
+
       // order the project
       posts = posts.sort((a, b) => a.acf.order - b.acf.order)
 
       let projectsTitle = []
 
       for (let i = 0; i < posts.length; i++) {
-        projectsTitle.push(posts[i].slug.replace(/-/g, ''))
+        projectsTitle.push({
+          link: posts[i].slug.replace(/-/g, ''),
+          label: posts[i].title.rendered.toUpperCase()
+        })
       }
 
       commit('updateProjectTitle', projectsTitle)
