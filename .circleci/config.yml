@@ -23,5 +23,15 @@ jobs:
       - run:
           name: build-project
           command: yarn generate
-      - run: ssh-keyscan -H 217.182.206.63 >> ~/.ssh/known_hosts
-      - run: rsync -avce ssh --delete ./dist/ debian@217.182.206.63:/var/www/html/corentinmarzin.fr/www/test
+      - run:
+          name: "What was my custom environment SERVER_NAME?"
+          command: echo ${SERVER_NAME}
+      - run:
+          name: "What was my custom environment sisisis?"
+          command: echo ${USER_VPS}
+      - run:
+         name: "SSH KEYSCAN"
+         command: ssh-keyscan -H ${SERVER_NAME} >> ~/.ssh/known_hosts
+      - run:
+         name: "Rsync, remove old generated files and place the new ones"
+         command: rsync -avce ssh --delete ./dist/ ${USER_VPS}@${SERVER_NAME}:${CUSTOM_PATH}
