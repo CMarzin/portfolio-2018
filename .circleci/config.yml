@@ -5,6 +5,8 @@ jobs:
     docker:
       - image: circleci/node:10.18.0
     steps:
+      - run: sudo apt-get install rsync
+      - add_ssh_keys
       - checkout
       - restore_cache:
           name: Restore Yarn Package Cache
@@ -21,3 +23,9 @@ jobs:
       - run:
           name: build-project
           command: yarn generate
+      - run:
+         name: "SSH KEYSCAN get knownh hosts"
+         command: ssh-keyscan -H ${SERVER_NAME} >> ~/.ssh/known_hosts
+      - run:
+         name: "Rsync, remove old generated files and place the new ones"
+         command: rsync -avce ssh --delete ./dist/ ${USER_VPS}@${SERVER_NAME}:${CUSTOM_PATH}
