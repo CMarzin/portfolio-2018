@@ -1,8 +1,8 @@
 <template>
   <div class="container__right">
     <div class="container__right-about">
-      <div @click="openAbout()" class="container__right-title">
-        <h3 v-if="this.toggleAbout">CLOSE</h3>
+      <div @click="openAbout" class="container__right-title">
+        <h3 v-if="toggleAbout">CLOSE</h3>
         <h3 v-else>ABOUT</h3>
       </div>
       <div class="container__right-about-content" style="transform: scale(0); background-color: #F5C316">
@@ -10,19 +10,19 @@
       </div>
     </div>
     <div class="container__right-menu">
-      <div @click="openMenu()" class="container__right-nav">
+      <div @click="openMenu" class="container__right-nav">
         <div class="container__right-nav-title">
-          <h3 v-if="this.toggleMenu">CLOSE</h3>
+          <h3 v-if="toggleMenu">CLOSE</h3>
           <h3 v-else>MENU</h3>
         </div>
       </div>
       <div :class="['container__right-menu-content', customClassBg]" style="transform: scaleX(0);">
-        <nuxt-link alt="Link to Menu" v-for="title in this.$store.state.projectTitle" :key="title.id" :to="title.replace(/\s+/g, '') === $store.state.projectTitle[0] ? '/' : title.replace(/\s+/g, '')">
-          <h3 :class="['container__main-nav_horizontal--title', highlightCurrentRoute]" >{{ title.toUpperCase() }}</h3>
-          <span v-if="highlightCurrentRoute(title)" class="container__right-menu-current-path"></span>
+        <nuxt-link alt="Link to Menu" v-for="title in this.$store.state.projectTitle" :key="title.link" :to="title.link.replace(/\s+/g, '') === $store.state.projectTitle[0].link ? '/' : title.link.replace(/\s+/g, '')">
+          <h3 :class="['container__main-nav_horizontal--title', highlightCurrentRoute]" >{{ title.label }}</h3>
+          <span v-if="highlightCurrentRoute(title.link)" class="container__right-menu-current-path"></span>
         </nuxt-link>
       </div>
-      <nuxt-link :title="this.$store.state.projects[this.$store.state.pathToNextProject].titleLink" class="container__right-next-project" :to="this.$store.state.pathToNextProject">
+      <nuxt-link :title="$store.state.projects[$store.state.pathToNextProject].title_link" class="container__right-next-project" :to="$store.state.pathToNextProject">
         <div :class="['container__right-next-volet', customClassBgNext]"></div>
         <div class="container__right-next-icon">
           <span class="container__right-next-text">NEXT</span>
@@ -98,7 +98,7 @@ export default {
     openMenu: function () {
       if (this.toggleMenu) {
         this.toggleMenu = false
-        this.$store.state.stateMenu = this.toggleMenu
+        this.$store.commit('updateStateMenu', this.toggleMenu)
         anime({
           targets: '.container__right-menu-content',
           duration: 500,
@@ -115,7 +115,7 @@ export default {
           scaleX: 1
         })
         this.toggleMenu = true
-        this.$store.state.stateMenu = this.toggleMenu
+        this.$store.commit('updateStateMenu', this.toggleMenu)
       }
     },
     openAbout: function () {

@@ -4,10 +4,14 @@ export default function ({ route, store }) {
   let formatTitle = []
 
   for (let i = 0; i < ProjectTitle.length; i++) {
-    formatTitle.push(ProjectTitle[i].replace(/\s+/g, ''))
+    formatTitle.push(ProjectTitle[i].link.replace(/\s+/g, ''))
   }
 
-  const currentPathName = route.name ? route.name : formatTitle[0]
+  let currentPathName = route.name && route.name !== 'index' ? route.name : formatTitle[0]
+
+  if (route.name === 'slug') {
+    currentPathName = route.params.slug
+  }
 
   let indexOfCurrentProject = formatTitle.indexOf(currentPathName)
 
@@ -27,18 +31,18 @@ export default function ({ route, store }) {
 
   /*
   **********
-  * NEED REFACTORING WITH ACTION
+  * Update state
   **********
   */
 
-  store.state.pathToPreviousProject = pathToPreviousProject
-  store.state.pathToCurrentProject = pathToCurrentProject
-  store.state.pathToNextProject = pathToNextProject
-  store.state.pathToSecondNextProject = pathToSecondNextProject
+  store.commit('updatePathToPreviousProject', pathToPreviousProject)
+  store.commit('updatePathToCurrentProject', pathToCurrentProject)
+  store.commit('updatePathToNextProject', pathToNextProject)
+  store.commit('updatePathToSecondNextProject', pathToSecondNextProject)
 
-  store.state.counterProject = indexOfCurrentProject
+  store.commit('updateCounterProject', indexOfCurrentProject)
 
-  currentProjectTitle = currentProjectTitle.toUpperCase()
+  currentProjectTitle = currentProjectTitle.label.toUpperCase()
 
-  store.state.currentProjectTitle = currentProjectTitle
+  store.commit('updateCurrentProjectTitle', currentProjectTitle)
 }
