@@ -1,7 +1,7 @@
 import axios from 'axios'
 const dynamicRoutes = () => {
   return axios
-    .get('http://admin.cocoweb.fr/wp-json/wp/v2/posts')
+    .get('http://localhost:8000/wp-json/wp/v2/posts')
     .then((res) => {
       return res.data.map(post => `/${post.slug.replace(/-/g, '')}`)
     })

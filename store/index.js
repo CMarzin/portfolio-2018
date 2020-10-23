@@ -45,7 +45,7 @@ export const actions = {
   async nuxtServerInit ({ state, commit }) {
     if (state.projects.length) { return }
     try {
-      let posts = await fetch('http://admin.cocoweb.fr/wp-json/wp/v2/posts').then(res => res.json())
+      let posts = await fetch('http://localhost:8000/wp-json/wp/v2/posts').then(res => res.json())
       posts = posts
         .filter(el => el.status === 'publish')
         .map(({ id, slug, title, excerpt, date, tags, content, categories, acf }) => ({
